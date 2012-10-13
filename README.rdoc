@@ -6,4 +6,4 @@
 
 2. shareされている本を見て、購入できる
 
-[http://yondara-qiita.herokuapp.com/](http://yondara-qiita.herokuapp.com/)
+http://yondara-qiita.herokuapp.com/
