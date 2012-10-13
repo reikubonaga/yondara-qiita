@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>読んだらQiita</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="header">
+  <%= link_to content_tag("div", "読んだらQiita", id: "logo"), root_path %>
+  <% if current_user %>
+    <%= link_to content_tag("div", "ログアウト", id: "signout"), destroy_user_session_path, method: "delete" %>
+  <% else %>
+    <%= link_to content_tag("div", "Facebook Login", id: "signout"), user_omniauth_authorize_path(:facebook) %>
+  <% end %>
+</div>
+<%= yield %>
+
+</body>
+</html>

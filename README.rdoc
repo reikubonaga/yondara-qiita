@@ -1,0 +1,9 @@
+== 読んだらQiitaへようこそ
+
+エンジニアの本棚。
+
+1. 本を読んで学んだことをshareできる
+
+2. shareされている本を見て、購入できる
+
+[http://yondara-qiita.herokuapp.com/](http://yondara-qiita.herokuapp.com/)

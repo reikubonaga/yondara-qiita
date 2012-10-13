@@ -1,0 +1,14 @@
+#container
+  #search
+    = form_for :books, method: "get" do |f|
+      = text_field_tag "q", params["q"], class: "search_bar", size: 50
+      = f.submit "検索", class: "send"
+  - @res && @res.items.each do |item|
+    - if item.get_hash("LargeImage")
+      .item
+        = link_to image_tag(item.get_hash("LargeImage")["URL"]), new_book_path({ q: params["q"], item: item.get('ASIN') }), class: "image-wrap"
+        .action
+          = link_to content_tag("div", "読んだ", class: "read btn"), new_book_path({ q: params["q"], item: item.get('ASIN') })
+          - book = Book.find_by_amazon_item_id(item.get('ASIN'))
+          - if book
+            = link_to content_tag("div", "Qiita", class: "qiita btn"), book_path(book.id)

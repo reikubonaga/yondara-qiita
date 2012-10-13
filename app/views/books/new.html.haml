@@ -1,0 +1,16 @@
+%h1 新しくQiitaを作成
+
+#left
+  .item_detail
+    = link_to image_tag(@item.get_hash("LargeImage")["URL"]), "", target: "_blank", class: "image-wrap"
+
+#right
+  = simple_form_for :book, url: books_path do |f|
+    = f.input :qiita_title, label: "Qiita Title"
+    %div
+      %label Qiita Body
+      = f.text_area :qiita_tips
+    = f.hidden_field :amazon_item_id, value: @item.get("ASIN")
+    = f.hidden_field :image_url, value: @item.get_hash("LargeImage")["URL"]
+    = hidden_field_tag "q", params["q"]
+    = f.submit "保存"

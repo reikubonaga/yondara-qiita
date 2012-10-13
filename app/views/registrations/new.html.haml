@@ -1,0 +1,8 @@
+%h1 sign up
+= simple_form_for :registration, as: resource_name, url: registration_path(resource_name) do |f|
+  = f.input :qiita_user
+  %div
+    %label Qiita Password
+    = password_field_tag "qiita_pass"
+  = f.button :submit
+  %div qiitaのパスワードはqiita APIのtokenを取得するために入力が必要ですが、読んだらQiita内に保存していません。

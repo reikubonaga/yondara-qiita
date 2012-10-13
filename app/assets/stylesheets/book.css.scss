@@ -1,0 +1,99 @@
+// Place all the styles related to the book controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$light_grey: #F9F9F9;
+$point: #54BD0D;
+
+.btn{
+  text-align: center;
+  cursor: pointer;
+  background-color: $point;
+  color: white;
+}
+
+body{
+  margin: 0px auto;
+  width: 1024px;
+}
+
+#header{
+  $header_height: 65px;
+  height: $header_height;
+  background: $light_grey;
+  #logo{
+    float: left;
+    font-size: 32px;
+    line-height: $header_height;
+    padding-left: 10px;
+  }
+  #signout{
+    float: right;
+    font-size: 28px;
+    line-height: $header_height;
+  }
+}
+
+#search{
+  height: 140px;
+  .search_bar{
+    font-size: 24px;
+    height: 50px;
+    margin: 40px 50px;
+  }
+  .send{
+    display: inline-block;
+    font-size: 24px;
+    height: 60px;
+    line-height: 40px;
+    background: $point;
+    padding: 5px 30px;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.item{
+  display: inline-block;
+  height: 370px;
+  margin-left: 20px;
+  img{
+    height: 300px
+  }
+  .read{
+    float: left;
+    width: 100px;
+  }
+  .qiita{
+    float: right;
+    width: 100px;
+  }
+}
+
+a:link { color: #000000 }
+a:visited {
+  color: $point;
+  text-decoration: none;
+}
+
+#left{
+  float: left;
+  width: 500px;
+  .buy{
+    width: 400px;
+  }
+}
+
+#right{
+  width: 400px;
+  float: left;
+}
+.title{
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.book_title{
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+

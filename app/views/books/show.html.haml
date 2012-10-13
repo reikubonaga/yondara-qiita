@@ -1,0 +1,11 @@
+%h1 新しくQiitaを作成
+
+#left
+  .item_detail
+    = link_to image_tag(@book.image_url), "", target: "_blank", class: "image-wrap"
+    = link_to content_tag("div", "購入", class: "btn buy"), @book.amazon_url, target: "_blank"
+
+#right
+  = content_tag "div", @book.title, class: "book_title"
+  = content_tag "div", @book.qiita_title, class: "title"
+  = content_tag "div", @book.qiita_tips.gsub(/\n/, '<br>').html_safe, class: "body"
